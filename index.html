@@ -7,25 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
-<?php 
- if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
- $ip=$_SERVER['HTTP_CLIENT_IP'];}
- elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
- $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];} else {
- $ip=$_SERVER['REMOTE_ADDR'];}
-$var=$ip;
 
-$file = file_get_contents("myFile.txt");
-   //echo "String not found!";
-   $myFile = "myFile.txt";
-   $fh = fopen($myFile, 'a+') or die("can't open file");
-    $date = date('Y-m-d H:i:s');
-
-   $stringData = $var ." - ".$date." \n";
-   fwrite($fh, $stringData);
-   fclose($fh);
-
-?>
 <head>
 <title>Rahul Anand Sharma </title>
 <!-- for-mobile-apps -->
